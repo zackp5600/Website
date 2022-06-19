@@ -11,6 +11,7 @@ def sign_up():
     sign_up_confirm == True
     email = request.form.get('email')
     first_name = request.form.get('first_name')
+    password1 = request.form.get('password1')
     if request.method == 'POST':
             db = mysql.connector.connect(
                 user='root',
@@ -19,8 +20,8 @@ def sign_up():
                 database='zacks_database')
             cursor = db.cursor()
             insert_stmt = "INSERT INTO cactus_website (email, first_name, password) VALUES (%s, %s, %s)"
-            # val = (email, first_name, password1)
-            # cursor.execute(insert_stmt, val)
+            val = (email, first_name, password1)
+            cursor.execute(insert_stmt, val)
             db.commit()
             print("data inserted")
             db.close()
@@ -28,7 +29,7 @@ def sign_up():
     return render_template('sign_up.html')
 
     return render_template('base.html')
-@routes.route('/login', methods=['POST', 'GET'])
+@routes.route('/website/login', methods=['POST', 'GET'])
 
 def login():
     login2 = True
@@ -49,8 +50,6 @@ def login():
 #        email = 'jim@gmail.com'
         args = [email]
         cursor = db.cursor()
-        # select_stmt = "SELECT * FROM cactus_website WHERE password = 'camaro';"
-        # cursor.execute(select_stmt)
         cursor.callproc('sp_cactus_website', args)
 
         for result in cursor.stored_results():
@@ -63,6 +62,7 @@ def login():
         for row in records:
             print("email = ", row[0]),
             print("password = ", row[1])
+            print("name = " , row[2])
         login_confirm = True
         db.commit()
         db.close()
