@@ -14,7 +14,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
-    <title>cactcus website Home page</title>
+    <title>Los Pollos Hermanos webpage</title>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
           <a class="nav-item nav-link" id="home" href="/">Home</a>
-          <a class="nav-item nav-link" id="login" href="/login">Login</a>
+          <a class="nav-item nav-link" id="login" href="/website/login">Login</a>
           <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
         </div>
       </div>
@@ -40,6 +40,29 @@
     <h1 align="center"> Home Page</h1>
 <br>
 </form>
+<script>
 
+        }
+</script>
+<script>
+    function visitPage(){
+    var x = document.getElementById("input");
+        window.location='http://www.google.com/search?q=' + x.value
+    }
+</script>
+
+
+<div class="form-group">
+    <label for="password1">Search</label>
+    <input
+      type="text"
+      class="form-control"
+      id="input"
+      name="password1"
+      placeholder="search"
+    />
+  </div>
+<button onclick="visitPage();">Search</button>
+<p1>Guaranteed no information is sold to facebook </p1>
 </body>
 </html>
