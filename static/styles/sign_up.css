@@ -1,0 +1,54 @@
+body{
+
+
+    background-color: white;
+}
+
+
+
+.form-group{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border:4px solid white;
+}
+
+.container{
+    border: 4px solid white;
+    height: 20%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: black;
+}
+
+
+.input{
+    position: absolute;
+    text-align: center;
+    height: 5%;
+    width: 10%;
+    border-radius: 12px;
+    /* margin-top: 10%; */
+}
+
+.btn {
+   position: absolute;
+   text-align: center;
+   margin-top: 5%;
+   background-color: #4681f4;
+}
+
+.sign-up{
+    position: absolute;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 5%;
+    font-size: 150%;
+    z-index: 1;
+    color: #c7c6c6;
+}

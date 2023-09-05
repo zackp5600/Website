@@ -1,0 +1,39 @@
+.form-group{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    border:12px solid black;
+}
+.container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vh;
+    border:12px solid black;
+}
+.search{
+    position: absolute;
+    text-align: center;
+    height: 5%;
+    width: 10%;
+    border-radius: 8px;
+}
+
+.btn{
+    position: absolute;
+    text-align: center;
+    margin-top: 6%;
+    border-radius: 8px;
+    background-color: #4681f4;
+}
+
+.info{
+    position: absolute;
+    text-align: left;
+    font-size: medium;
+    margin-top: 10%;
+}
