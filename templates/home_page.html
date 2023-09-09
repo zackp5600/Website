@@ -48,8 +48,11 @@
 <script>
 
 function displayImage() {
-  document.body.style.background = "#f3f3f3 url('{{ url_for('static', filename='image.png') }}') no-repeat right top";
-  return false;
+  // var divElement = document.getElementById('AI_img');
+
+  console.log("this works");
+  document.getElementById('AI_img').style.background = "#f3f3f3 url('{{ url_for('static', filename='image.png') }}') no-repeat right top";
+  console.log("this works");
 }
 
 
@@ -57,19 +60,20 @@ function displayImage() {
 
 <form method="POST">
 <div class="form-group">
-  <div class="container">
-    <label for="password1"></label>
-        <input
-          type="text"
-          class="search"
-          id="input"
-          name="password1"
-          placeholder="search"
-        />
-    <button type="button" onclick="displayImage()" class="btn">Search</button>
-    <p1 class="info">Guaranteed no information is sold to facebook </p1>
-  </div>
-        
+    <div id="AI_img" class="img"></div>
+      <div class="container">
+        <label for="password1"></label>
+            <input
+              type="text"
+              class="search"
+              id="input"
+              name="password1"
+              placeholder="search"
+            />
+        <button type="button" onclick="displayImage()" class="btn">Search</button>
+        <p1 class="info">Guaranteed no information is sold to facebook </p1>
+      </div>
+    
 </div>
 </form>
 </body>
